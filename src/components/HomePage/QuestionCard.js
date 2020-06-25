@@ -18,9 +18,13 @@ class QuestionCard extends Component {
     e.preventDefault();
     const { authedUser, question_id, author } = this.props;
     const { vote } = this.state;
-    this.props.dispatch(
-      handleSaveQuestionAnswer(authedUser, question_id, vote, author)
-    );
+    if (vote === '') {
+      alert('You cannot leave it blank. Please choose one option!');
+    } else {
+      this.props.dispatch(
+        handleSaveQuestionAnswer(authedUser, question_id, vote, author)
+      );
+    }
   };
 
   render() {
