@@ -1,0 +1,12 @@
+.not-found-container {
+  position: absolute;
+  width: 50vw;
+  height: 80vh;
+  left: 22%;
+  margin-top: 5%;
+  background: rgba(255, 255, 255, 0.63);
+}
+
+.not-found-container img {
+  height: 100%;
+}

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Button common styles */
+button {
+  
+}
+
+/* Sign up Button of Sign up page*/
+.signup-signup-button {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 70px;
+  left: 30%;
+  top: 80%;
+}
+/* Button text for signup and signin pages */
+.sign-button-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 59px;
+  color: #ffffff;
+}

@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.results-row {
+  position: absolute;
+  margin: 10% 30%;
+  width: 650px;
+  height: 370px;
+
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 8px;
+}
+
+.results-column {
+  float: left;
+  padding: 10px;
+  height: 100%;
+}
+
+.results-left {
+  width: 30%;
+  background: #3c444d;
+  box-shadow: 0px 30px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding-top: 15%;
+}
+
+.results-right {
+  width: 70%;
+  padding-left: 5%;
+}
+
+.results-card-title {
+  /* Would You Rather */
+  text-align: center;
+
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 43px;
+  color: #000000;
+}
+
+.results-column input {
+  width: 15px;
+  height: 15px;
+}
+
+.option-one-result-container {
+  /* position: absolute;
+  left: 4.88%;
+  right: 20.17%;
+  top: 0%;
+  bottom: 16.03%; */
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 353px;
+  height: 131px;
+
+  box-shadow: 0px 1px 14px #19282f;
+  border-radius: 14px;
+}
+
+.answer-text {
+  color: white;
+}
+
+.progress-bar-container {
+  /* position: absolute;
+  left: 10.19%;
+  right: 28.29%;
+  top: 49.36%;
+  bottom: 41.12%; */
+  width: 290px;
+  height: 15px;
+
+  background: #060606;
+  border-radius: 6px;
+}
+
+.progress-bar {
+  /* position: absolute;
+  left: 10.19%;
+  right: 66.47%;
+  top: 49.36%;
+  bottom: 41.12%; */
+  width: 90%;
+  height: 15px;
+
+  background: #ff575f;
+  border-radius: 6px;
+}
+
+.percentage {
+  /* position: absolute;
+  height: 17px;
+  left: 25%;
+  top: 18%; */
+  display: inline;
+  margin-left: 55%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #ff575f;
+}
+
+/* .vote-count-container p {
+    text-align: left;
+} */
+
+.votes-count {
+  /* position: absolute;
+  width: 93px;
+  height: 21px;
+  left: 48px;
+  top: 98px; */
+  text-align: left;
+  display: inline;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 21px;
+
+  letter-spacing: 0.25px;
+
+  color: #ffffff;
+}
+
+.option-two-result-container {
+  /* position: absolute;
+    left: 4.88%;
+    right: 20.17%;
+    top: 0%;
+    bottom: 16.03%; */
+  position: relative;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 353px;
+  height: 131px;
+  box-shadow: 0px 1px 14px #19282f;
+  border-radius: 14px;
+}
+
+.badge {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  right: -5%;
+
+  background: linear-gradient(180deg, #55555f 0%, #d73636 100%);
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 25px;
+
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 11px;
+  /* or 92% */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: -0.0192308px;
+
+  color: #ffffff;
+}

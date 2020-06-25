@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Would You Rather */
+.would-you-rather-text {
+  text-align: center;
+
+  font-family: 'Rock Salt';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 96px;
+  line-height: 229px;
+  color: #ffffff;
+}
+
+.landing-signup-button {
+  position: absolute;
+  width: 290px;
+  height: 103px;
+  left: 14.8%;
+  top: 461px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+
+  color: #ffffff;
+  background: #313088;
+  border-radius: 18px;
+}
+
+/* Landing Sign in Button */
+.landing-signin-button {
+  position: absolute;
+  width: 290px;
+  height: 103px;
+  left: 65.14%;
+  top: 461px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+
+  color: #ffffff;
+  background: #313088;
+  border-radius: 18px;
+}
+
+.landing-signup-text,
+.landing-signin-text {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+
+  color: #ffffff;
+}
+
+/* OR */
+.orText {
+  position: absolute;
+  width: 114px;
+  height: 98px;
+  left: 45%;
+  top: 461px;
+
+  font-family: 'Ribeye Marrow', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 72px;
+  line-height: 98px;
+
+  color: #ffffff;
+}

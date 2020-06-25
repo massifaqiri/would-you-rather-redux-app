@@ -1,68 +1,50 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Would You Rather Project
 
-## Available Scripts
+This project was built on the starter template of create-react-app. I used React for building its user interface, Redux for its state management and Redux Persist for persisting the state in local storage.
 
-In the project directory, you can run:
+## Points to be noted
 
-### `yarn start`
+- The stylesheets import various Google Fonts, so you need to be connected to internet for fonts to work.
+- In order to persist states of the store upon refresh, I used [Redux Persist](https://www.npmjs.com/package/redux-persist) library. In order to make that work, I had to make a method of \_verifyUser and \_verifyQuestion in \_DATA.js in order to verify users and questions existence in backend. That would enable me to catch the error raised by inconsistency between the backend and the Redux's persisted store.
+- After having Redux Persist configured in the app, I learned from discussions that it was okay if the data is lost upon refresh, but I still kept it. However, I noticed a few times that the data were not persisted as expected, but they were minor issues. If you encountered it, please make a note that it is due to Redux Persist and fulfills this project's criteria.
+* In order to set up a sign up and log in system, I had to give passwords to the current users in the backend. So for each user, the password is their username. For instance, in order to log in as John Doe, log in as johndoe with password of johndoe.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How to start it
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+To get started:
 
-### `yarn test`
+- install all project dependencies with `npm install`
+- start the development server with `npm start`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## What You're Getting
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+├── public
+└── src
+    ├── actions #action handlers
+        ├── authedUser.js # action handler for authenticated user
+        ├── currentTab.js # action handler for the current tab in home page
+        ├── questions.js # action handler for the questions
+        ├── shared.js # action handler for initial loading of the data into the store
+        ├── users.js # action handler for the users
+    ├── assets
+        ├── avatars # the directory containing the avatars
+        ├── images # the directory containing the images used by the app
+    ├── components
+        ├── HomePage # components for the home page like, questions and tabs
+        ├── LandingPage # components for the landing page like, signup and signin
+        ├── Leaderboard # components for the leaderboard page
+        ├── NavBar # components for the Navigation bar
+        ├── PostQuestionPage # components for the 'Submit Your Question' page
+        ├── App.js # component containing all components and routing them to their paths
+        ├── NotFoundPage.js # component containing the 404 message
+    ├── middlewares
+        ├── index.js # exporting applyMiddleware with thunk middleware
+        ├── logger.js # logger middleware
+    ├── reducers # reducers for authedUser, currentTab, questions and users
+    ├── styles # CSS stylesheets for the components
+    ├── _DATA.js # the mock backend data
+    ├── index.js # ReactDOM renderer of the App component and configures the Redux Persist
+├── package.json
+├── README.md # this file
+```

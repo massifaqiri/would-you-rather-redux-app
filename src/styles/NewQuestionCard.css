@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.new-question-container {
+  position: absolute;
+  margin: 10% 30%;
+  width: 721px;
+  height: 355px;
+
+  background: rgba(255, 255, 255, 0.47);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.new-question-title {
+  font-family: 'Rock Salt', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 86px;
+
+  color: #000000;
+}
+
+.new-question-input {
+  width: 665px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 3px;
+  border-color: transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  color: #463f3b;
+}
+
+.new-question-ortext {
+  font-family: 'Rock Salt', cursive;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 57px;
+
+  color: #000000;
+}
+
+.new-question-submit {
+  width: 285.02px;
+  height: 59.41px;
+  margin-top: 5%;
+  margin-left: 30%;
+  text-align: center;
+  background: linear-gradient(90deg, #f27a54 0%, #a154f2 100%);
+  border-radius: 20px;
+  display: flex;
+
+  position: absolute;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+  text-align: center;
+}

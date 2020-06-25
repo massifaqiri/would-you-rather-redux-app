@@ -1,0 +1,29 @@
+.signin-signin-button {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 70px;
+  left: 30%;
+  top: 80%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 59px;
+  color: #ffffff;
+  background: #313088;
+  border-radius: 18px;
+}
+
+.account-creation-message {
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+}

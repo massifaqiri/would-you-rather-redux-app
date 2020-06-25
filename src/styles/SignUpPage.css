@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* Form box */
+.signup-form-box {
+  position: absolute;
+  margin: auto;
+  width: 598px;
+  height: 729px;
+  left: 35%;
+  top: 14%;
+  background: #202027;
+  border-radius: 20px;
+}
+
+.signin-form-box {
+  position: absolute;
+  margin: auto;
+  width: 598px;
+  height: 650px;
+  left: 35%;
+  top: 14%;
+  background: #202027;
+  border-radius: 20px;
+}
+
+.name-input {
+  position: absolute;
+  left: 8%;
+  top: 5%;
+}
+
+.username-input {
+  position: absolute;
+  left: 8%;
+  top: 22%;
+}
+
+.password-input {
+  position: absolute;
+  left: 8%;
+  top: 39%;
+}
+
+.repeat-password-input {
+  position: absolute;
+  left: 8%;
+  top: 56%;
+}
+
+.signup-signup-button {
+  position: absolute;
+  text-align: center;
+  width: 220px;
+  height: 70px;
+  left: 30%;
+  top: 80%;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 59px;
+  color: #ffffff;
+  background: #313088;
+  border-radius: 18px;
+}
+
+.account-creation-message {
+  position: absolute;
+  bottom: 0%;
+  text-align: center;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+}

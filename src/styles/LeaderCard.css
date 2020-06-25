@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+.leadercard-row {
+  width: 521px;
+  height: 180px;
+  margin-bottom: 8%;
+
+  background: #27303d;
+}
+
+.leadercard-column {
+  float: left;
+  padding: 10px;
+}
+
+.leader-avatar {
+  width: 25%;
+  text-align: center;
+}
+
+.leader-avatar h1 {
+  /* H2 */
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.leader-numbers {
+  width: 50%;
+}
+
+.leader-numbers div {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+
+  color: #ffffff;
+}
+
+.leader-numbers p {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 5%;
+  margin-bottom: 18%;
+  color: #ffffff;
+
+  mix-blend-mode: normal;
+  opacity: 0.4;
+}
+
+.leader-score {
+  width: 25%;
+  padding-top: 5%;
+}
+
+.scorecard {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  width: 95px;
+  height: 110px;
+
+  background: radial-gradient(
+    195.47% 135.51% at 5.79% 97.27%,
+    #e84a5b 0%,
+    #e84a5b 97.82%
+  );
+  border-radius: 10px;
+}
+
+.scorecard h5 {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+  letter-spacing: 0.44px;
+
+  color: #ffffff;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  align-self: flex-start;
+  margin: 0px 0px;
+}
+
+.scorecard h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 34px;
+  line-height: 44px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.44px;
+
+  color: #ffffff;
+
+  /* Inside Auto Layout */
+
+  flex: none;
+  order: 0;
+  align-self: center;
+  margin: 6px 0px;
+}

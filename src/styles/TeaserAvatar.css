@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+.avatar-container img {
+  display: block;
+  margin: auto;
+}
+
+.avatar-container div {
+  font-family: 'Zilla Slab', serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 28px;
+
+  text-align: center;
+
+  color: #ffffff;
+}
