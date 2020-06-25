@@ -5,20 +5,9 @@
   position: absolute;
   margin: auto;
   width: 598px;
-  height: 729px;
+  height: 600px;
   left: 35%;
-  top: 14%;
-  background: #202027;
-  border-radius: 20px;
-}
-
-.signin-form-box {
-  position: absolute;
-  margin: auto;
-  width: 598px;
-  height: 650px;
-  left: 35%;
-  top: 14%;
+  top: 12%;
   background: #202027;
   border-radius: 20px;
 }

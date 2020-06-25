@@ -1,13 +1,12 @@
 # Would You Rather Project
 
-This project was built on the starter template of create-react-app. I used React for building its user interface, Redux for its state management and Redux Persist for persisting the state in local storage.
+This project was built on the starter template of create-react-app. I used React for building its user interface and Redux for its state management.
 
 ## Points to be noted
 
-- The stylesheets import various Google Fonts, so you need to be connected to internet for fonts to work.
-- In order to persist states of the store upon refresh, I used [Redux Persist](https://www.npmjs.com/package/redux-persist) library. In order to make that work, I had to make a method of \_verifyUser and \_verifyQuestion in \_DATA.js in order to verify users and questions existence in backend. That would enable me to catch the error raised by inconsistency between the backend and the Redux's persisted store.
-- After having Redux Persist configured in the app, I learned from discussions that it was okay if the data is lost upon refresh, but I still kept it. However, I noticed a few times that the data were not persisted as expected, but they were minor issues. If you encountered it, please make a note that it is due to Redux Persist and fulfills this project's criteria.
-* In order to set up a sign up and log in system, I had to give passwords to the current users in the backend. So for each user, the password is their username. For instance, in order to log in as John Doe, log in as johndoe with password of johndoe.
+- All changes are stored in local storage but not committed to the backend. So, upon refresh, everything goes back to the initial state that resembles the backend. In order to handle errors that could rise due to the inconsistency between the local storage and the mock backend, I had to make methods of \_verifyUser and \_verifyQuestion in \_DATA.js in order to verify users and questions existence in backend.
+- Previously I used Redux Persist to persist the store, but the reviewer suggested to remove it. Thus, I removed the Redux Persist and currently all changes are persisted in local storage and will be lost upon refresh, just as expected. As long as the page is not refreshed, every change is persisted though.
+- In order to set up a sign up and log in system, I had to give passwords to the current users in the backend. So for each user, the password is their username. For instance, in order to log in as John Doe, log in as johndoe with password of johndoe.
 
 ## How to start it
 
@@ -44,7 +43,7 @@ To get started:
     ├── reducers # reducers for authedUser, currentTab, questions and users
     ├── styles # CSS stylesheets for the components
     ├── _DATA.js # the mock backend data
-    ├── index.js # ReactDOM renderer of the App component and configures the Redux Persist
+    ├── index.js # ReactDOM renderer of the App component and creates the store
 ├── package.json
 ├── README.md # this file
 ```

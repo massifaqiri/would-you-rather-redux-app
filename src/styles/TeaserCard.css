@@ -6,9 +6,10 @@
 }
 
 .row {
-  /* position: absolute; */
+  position: relative;
+  margin: auto;
   margin-bottom: 2%;
-  width: 482px;
+  width: 70%;
   height: 157px;
 
   background: #ffffff;
@@ -33,7 +34,6 @@
 }
 
 .card-title {
-  /* Would You Rather */
   text-align: center;
 
   font-family: 'Rock Salt';

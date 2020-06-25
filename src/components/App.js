@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Route } from 'react-router-dom';
+import LoadingBar from 'react-redux-loading';
+import { Route, Switch } from 'react-router-dom';
 import handleReceiveData from '../actions/shared';
 import LandingPage from './LandingPage/LandingPage';
 import SignUpPage from './LandingPage/SignUpPage';
@@ -26,23 +27,25 @@ class App extends Component {
     const { authedUser } = this.props;
     return (
       <div>
+        <LoadingBar />
         {authedUser === 'null' ? (
           <div>
+            <NavBar />
             <Route exact path='/' component={LandingPage} />
-            <Route path='/signup' component={SignUpPage} />
-            <Route path='/signin' component={SignInPage} />
-            <Route exact path='/questions' component={NotFoundPage} />
-            <Route path='/questions/:question_id' component={NotFoundPage} />
-            <Route path='/add' component={NotFoundPage} />
-            <Route path='/leaderboard' component={NotFoundPage} />
+            <Route exact path='/user/signup/form' component={SignUpPage} />
+            <Route exact path='/:param' component={SignInPage} />
+            <Route exact path='/:param/:param2' component={SignInPage} />
           </div>
         ) : (
           <div>
             <NavBar />
-            <Route exact path='/questions' component={Tabs} />
-            <Route path='/questions/:question_id' component={PollDetails} />
-            <Route path='/add' component={NewQuestionCard} />
-            <Route path='/leaderboard' component={LeaderCards} />
+            <Switch>
+              <Route exact path='/questions' component={Tabs} />
+              <Route path='/questions/:question_id' component={PollDetails} />
+              <Route path='/add' component={NewQuestionCard} />
+              <Route path='/leaderboard' component={LeaderCards} />
+              <Route component={NotFoundPage} />
+            </Switch>
           </div>
         )}
       </div>

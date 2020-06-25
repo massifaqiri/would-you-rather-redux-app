@@ -36,7 +36,7 @@ export function handleSaveQuestionAnswer(authedUser, qid, answer, author) {
       return _saveQuestionAnswer({ authedUser, qid, answer });
     } else {
       console.log(
-        'It looks like the user or the question is not in the backend but still exists in the local storage, due to Redux Persist. So, your answer is stored in local storage.'
+        'It looks like the user or the question is not in the backend but still exists in the local storage. So, your answer is stored in local storage. Upon refresh, you might lose it.'
       );
     }
   };
@@ -58,7 +58,7 @@ export function handleAddQuestion(optionOneText, optionTwoText, author) {
       return _saveQuestion({ optionOneText, optionTwoText, author });
     } else {
       console.log(
-        'There was a problem adding question to the backend, probably because the user is not in the backend while persisted in the store'
+        'There was a problem adding question to the backend, probably because the user is not in the backend while persisted in the local storage.'
       );
     }
   };

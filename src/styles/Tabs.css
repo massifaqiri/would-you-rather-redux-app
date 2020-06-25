@@ -5,19 +5,18 @@
 }
 
 .content-container {
-  position: absolute;
-  width: 570px;
-  height: 85%;
-  left: 35%;
-  top: 87px;
-  /* background-color: red; */
+  margin: auto;
+  position: relative;
+  height: 100vh;
+  width: 50%;
+  margin-top: 5%;
 }
 
 .content-header {
-  position: absolute;
-  width: 405.71px;
+  position: relative;
+  margin: auto;
+  width: 55%;
   height: 65px;
-  left: 15%;
   z-index: 10;
 
   background: linear-gradient(90deg, #c0311e 0%, #8e3838 100%);
@@ -61,7 +60,6 @@
 
 .active-tab {
   background: rgba(255, 255, 255, 0.2);
-
   border-radius: 3px;
   border-color: transparent;
 }

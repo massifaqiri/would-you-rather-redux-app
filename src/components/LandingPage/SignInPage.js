@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { setAuthedUser } from '../../actions/authedUser';
+import { setCurrentTab } from '../../actions/currentTab';
 import SignInputBox from './SignInputBox';
 import '../../styles/SignInPage.css';
 
@@ -36,8 +37,13 @@ class SignInPage extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const {
+      match: { params },
+    } = this.props;
+    const { param, param2 } = params;
     const { username, password } = this.state;
     const { users } = this.props;
+    
     if (!username || !password) {
       this.setState({
         anyBlankField: true,
@@ -51,7 +57,31 @@ class SignInPage extends Component {
         if (recordedPassword === password) {
           // Log in successfully by routing to the next page
           this.props.dispatch(setAuthedUser(username));
-          this.props.history.push('/questions');
+          switch (param) {
+            case 'signin':
+            case 'questions':
+              this.props.dispatch(setCurrentTab('home'));
+              break;
+            case 'add':
+              this.props.dispatch(setCurrentTab('newQuestion'));
+              break;
+            case 'leaderboard':
+              this.props.dispatch(setCurrentTab('leaderboard'));
+              break;
+            default:
+              this.props.dispatch(setCurrentTab('home'));
+              break;
+          }
+
+          if (param === 'signin') {
+            this.props.history.push('/questions');
+          } else {
+            if (param2 !== undefined) {
+              this.props.history.push(`/${param}/${param2}`);
+            } else {
+              this.props.history.push(`/${param}`);
+            }
+          }
         } else {
           this.setState({
             anyBlankField: false,
@@ -78,7 +108,6 @@ class SignInPage extends Component {
       anyBlankField,
       incorrectCredentials,
     } = this.state;
-
     return (
       <div className='signin-form-box'>
         <div className='username-input'>

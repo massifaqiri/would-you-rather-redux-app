@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.signin-form-box {
+  position: absolute;
+  margin: auto;
+  width: 598px;
+  height: 580px;
+  left: 35%;
+  top: 14%;
+  background: #202027;
+  border-radius: 20px;
+}
+
 .signin-signin-button {
   position: absolute;
   text-align: center;

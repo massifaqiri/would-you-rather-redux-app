@@ -18,10 +18,10 @@ function NavBar(props) {
 
   const handleLogOut = () => {
     props.dispatch(setAuthedUser('null'));
-    props.dispatch(setCurrentTab('home'));
+    props.dispatch(setCurrentTab('null'));
   };
 
-  const { currentTab } = props;
+  const { currentTab, authedUser } = props;
   return (
     <div className='navbar'>
       <Link
@@ -51,25 +51,31 @@ function NavBar(props) {
       >
         LEADERBOARD
       </Link>
-      <NavAvatar />
-      <Link
-        to='/signin'
-        style={{ textDecoration: 'none' }}
-        onClick={handleLogOut}
-      >
-        <button className='logout-button'>LOG OUT</button>
-      </Link>
+      {authedUser !== 'null' && (
+        <div>
+          <NavAvatar />
+          <Link
+            to='/signin'
+            style={{ textDecoration: 'none' }}
+            onClick={handleLogOut}
+          >
+            <button className='logout-button'>LOG OUT</button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
 
 NavBar.propTypes = {
   currentTab: PropTypes.string.isRequired,
+  authedUser: PropTypes.string.isRequired,
 };
 
-function mapStateToProps({ currentTab }) {
+function mapStateToProps({ currentTab, authedUser }) {
   return {
     currentTab,
+    authedUser,
   };
 }
 

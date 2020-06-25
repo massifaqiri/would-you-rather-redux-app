@@ -58,7 +58,11 @@ class QuestionCard extends Component {
             {optionTwoText}
           </div>
           <div className='qcard-btn-container'>
-            <button className='qcard-submit-btn' onClick={this.handleSubmit}>
+            <button
+              className='qcard-submit-btn'
+              onClick={this.handleSubmit}
+              disabled={this.state.vote === ''}
+            >
               SUBMIT
             </button>
           </div>

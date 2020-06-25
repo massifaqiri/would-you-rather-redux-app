@@ -9,7 +9,7 @@ function LandingPage(props) {
   return (
     <div>
       <div className='would-you-rather-text'>Would You Rather</div>
-      <Link to='/signup'>
+      <Link to='/user/signup/form'>
         <button className='landing-signup-button'>Sign Up</button>
       </Link>
       <span className='orText'>OR</span>
